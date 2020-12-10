@@ -1,0 +1,56 @@
+{
+  "name": "@beau/dnd-smooth",
+  "version": "0.1.0",
+  "description": "a dnd helper library",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.umd.js",
+  "type": "dist/types/index.d.ts",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "rollup -c",
+    "build": "npm run build:types && npm run build:js",
+    "copy": "cp dist/index.esm.js doc/index.esm.js",
+    "serve": "serve doc",
+    "doc": "npm run copy && npm run serve"
+  },
+  "bin": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khaliliu/dnd-smooth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/khaliliu/dnd-smooth/issues"
+  },
+  "homepage": "https://github.com/khaliliu/dnd-smooth/issues#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/plugin-proposal-class-properties": "7.12.1",
+    "@babel/plugin-proposal-object-rest-spread": "7.12.1",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-typescript": "^7.9.0",
+    "@rollup/plugin-babel": "^5.2.2",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@rollup/plugin-typescript": "^6.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.8.1",
+    "@typescript-eslint/parser": "^4.8.1",
+    "eslint": "^7.13.0",
+    "rollup": "^2.33.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "serve": "^11.3.2",
+    "typescript": "^4.0.5"
+  },
+  "keywords": [
+    "dnd",
+    "javascript",
+    "typescript",
+    "dnd"
+  ],
+  "author": "khaliliu",
+  "license": "MIT"
+}
